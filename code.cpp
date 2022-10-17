@@ -1,6 +1,19 @@
 #include <iostream>
 using namespace std;
 
+int gcd(int a, int b) {
+    while (a != b) {
+        if (a>b) {
+            a = a-b;
+        } else if (b>a) {
+            b = b-a;
+        }
+    }
+    return a;
+}
+
 int main() {
-    cout << "Hello, World!";
+    int a,b;
+    cin >> a >> b;
+    cout << gcd(a, b);
 }
